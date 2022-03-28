@@ -30,4 +30,7 @@ ssh-add ~/.ssh/<filename>
 cat ~/.ssh/<filename>.pub
 
 # Add corresponding public key to your account on github
+
+# Use ssh style url to clone repositories, or change remote url with:
+git remote set-url origin git@github.com:<user>/<repository>.git
 ```
