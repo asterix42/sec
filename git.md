@@ -1,5 +1,9 @@
 # Git configuration on Linux
 
+## Installing GIT
+
+
+
 ## Generating PAT
 
 ```sh
@@ -33,4 +37,14 @@ cat ~/.ssh/<filename>.pub
 
 # Use ssh style url to clone repositories, or change remote url with:
 git remote set-url origin git@github.com:<user>/<repository>.git
+```
+
+## Auto starting ssh-agent
+
+```sh
+# Add to ~/.bashrc
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -s`
+    ssh-add
+fi
 ```
